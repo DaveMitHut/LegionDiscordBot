@@ -1,0 +1,16 @@
+{
+  "name": "Legion",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodejs index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  },
+  "author": "DaveMitHut",
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
+}
