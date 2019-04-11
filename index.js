@@ -10,7 +10,7 @@ client.on('ready', () => {
 client.on('message', msg => {
     if (msg.content.startsWith('!card')) {
         var i = msg.content.indexOf(' ');
-        var cardname = [msg.content.split( )];
+        var cardname = [msg.content.split(" ")];
         msg.reply(cardname[1]);
     }
 })
