@@ -1,6 +1,5 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
-const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`)
@@ -22,15 +21,13 @@ client.on('message', msg => {
                 req += '+' + card[i];
             }
         }
-        var Http = new XMLHttpRequest();
-        Http.open("GET", req);
-        Http.send();
-
-        Http.onreadystateexchange=function() {
-           if (this.readystate==4 && this.status==200) {
-               console.log(Http.responseText)
-           }
-        }
+        axios.get(req)
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
     }
 })
 
