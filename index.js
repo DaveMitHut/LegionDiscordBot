@@ -14,7 +14,8 @@ client.on('message', msg => {
         var i;
         var req = 'https://api.scryfall.com/cards/names?fuzzy=';
         var cardlength = card.length;
-        for (i = 1; i <= cardlength; i++) {
+
+        for (i = 1; i < cardlength; i++) {
             if (i == 1) {
                 req += card[i];
             }
@@ -22,7 +23,16 @@ client.on('message', msg => {
                 req += '+' + card[i];
             }
         }
-        msg.reply(req);
+        const Http = new XMLHttpRequest();
+        const url = req;
+        Http.open("GET", url);
+        Http.send();
+
+        Http.onreadystateexchange=function() {
+           if (this.readystate==4 && this.status==200) {
+               console.log(Http.responseText)
+           }
+        }
     }
 })
 
