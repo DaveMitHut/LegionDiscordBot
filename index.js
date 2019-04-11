@@ -11,7 +11,17 @@ client.on('message', msg => {
     if (msg.content.startsWith('!card')) {
         var i = msg.content.indexOf(' ');
         var card = msg.content.split(" ");
-        msg.reply(card[1]);
+        var i;
+        var req = 'https://api.scryfall.com/cards/names?fuzzy=';
+        for (i = 1; i <= len(card); i++) {
+            if (i == 1) {
+                req += card[i];
+            }
+            else {
+                req += '+' + card[i];
+            }
+        }
+        msg.reply(req);
     }
 })
 
