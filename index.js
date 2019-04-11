@@ -8,6 +8,15 @@ client.on('ready', () => {
 })
 
 client.on('message', msg => {
+    if (msg.content.startsWith('!card')) {
+        var i = msg.content.indexOf(' ');
+        var split = [msg.content.slice(o,i), msg.content.slice(i+1)];
+        var cardname = split[1];
+        msg.reply(cardname);
+    }
+})
+
+client.on('message', msg => {
     if (msg.content == 'ping') {
         msg.reply('Pong!')
     }
