@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 const Discord = require('discord.js')
 const client = new Discord.Client()
 const axios = require('axios')
@@ -104,7 +102,9 @@ client.on('message', msg => {
 
 // greet new members
 client.on('guildMemberAdd', member => {
-    member.send(`Welcome to our Server! Remember, DaveMitHut is the overlord here and as his creation, I swear everlasting loyalty to my creator!`)
+    member.send(`Welcome to our Server! Remember, DaveMitHut is the overlord here and as his creation, 
+                 I swear everlasting loyalty to my creator! If you want to see what I am capable of, 
+                 type !commands in the main chatroom.`)
 })
 
 client.login(process.env.LEGION_TOKEN)
