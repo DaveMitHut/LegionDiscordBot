@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodejs index.js",
+    "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "dependencies": {
@@ -14,5 +14,7 @@
   "author": "DaveMitHut",
   "devDependencies": {
     "nodemon": "^1.18.11"
+    "axios": "^0.18.0",
+    "discord.js": "^11.4.2",
   }
 }
