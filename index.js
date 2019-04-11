@@ -13,7 +13,8 @@ client.on('message', msg => {
         var card = msg.content.split(" ");
         var i;
         var req = 'https://api.scryfall.com/cards/names?fuzzy=';
-        for (i = 1; i <= len(card); i++) {
+        var cardlength = card.length;
+        for (i = 1; i <= cardlength; i++) {
             if (i == 1) {
                 req += card[i];
             }
