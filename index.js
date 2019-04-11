@@ -1,7 +1,6 @@
-import axios from 'axios'
-
 const Discord = require('discord.js')
 const client = new Discord.Client()
+const axios = require('axios')
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`)
