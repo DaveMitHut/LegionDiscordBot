@@ -23,9 +23,8 @@ client.on('message', msg => {
                 req += '+' + card[i];
             }
         }
-        const Http = new XMLHttpRequest();
-        const url = req;
-        Http.open("GET", url);
+        var Http = new XMLHttpRequest();
+        Http.open("GET", req);
         Http.send();
 
         Http.onreadystateexchange=function() {
