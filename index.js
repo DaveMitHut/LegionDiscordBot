@@ -7,7 +7,7 @@ client.on('ready', () => {
 })
 
 //on wrong command, show how to view all commands
-/*client.on('message', msg => {
+client.on('message', msg => {
     if (msg.content.startsWith('!')) {
         if (!(msg.content.startsWith('!commands')) && !(msg.content.startsWith('!card')) && !(msg.content.startsWith('!cards')) &&
             !(msg.content.startsWith('!legality')) && !(msg.content.startsWith('!legalities')) && !(msg.content.startsWith('!legal')) &&
@@ -16,17 +16,16 @@ client.on('ready', () => {
                 msg.reply(', it looks like you have a typo in your command.\nType !commands to see what I can do for you.');
         }
     }
-})*/
+})
 
 // display all commands
 client.on('message', msg => {
-    if (msg.content.startsWith('!')) {
     if (msg.content.startsWith('!commands')) {
         msg.reply(', here is a list of what I can do:\n!card cardname -> displays card for a given cardname\n' + 
                   '!legality cardname -> displays a cards legalities for Standard, Modern & Commander\n' + 
                   '!rulings cardname -> displays existing rulings for a card\n' + 
                   '!dice xdx -> rolls the specified number of dice for you. !roll works as well');
-    }}
+    }
 })
 
 // roll a specified number of specified dice with !dice xdx
