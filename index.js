@@ -25,16 +25,16 @@ client.on('message', msg => {
 })
 
 // roll a specified number of specified dice
-/*client.on('message', msg => {
+client.on('message', msg => {
     if (msg.content.startsWith('!dice') || msg.content.startsWith('!roll')) {
         var cont = msg.content.split(" ");
         var dice = cont[1].split("d");
         for (var i = 0; i < dice[0]; i++) {
-            var rand = (Math.random * int(dice[1])) + 1;
+            var rand = (Math.random * parseInt(dice[1], 10)) + 1;
             msg.reply('\nRoll ' + i + ': ' + rand);
         }
     }
-})*/
+})
 
 // display card image with !card name
 client.on('message', msg => {
