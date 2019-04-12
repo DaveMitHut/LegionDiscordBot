@@ -25,7 +25,7 @@ client.on('message', msg => {
 })
 
 // roll a specified number of specified dice
-client.on('message', msg => {
+/*client.on('message', msg => {
     if (msg.content.startsWith('!dice') || msg.content.startsWith('!roll')) {
         var cont = msg.content.split(" ");
         var dice = cont[1].split("d");
@@ -34,7 +34,7 @@ client.on('message', msg => {
             msg.reply('\nRoll ' + i + ': ' + rand);
         }
     }
-})
+})*/
 
 // display card image with !card name
 client.on('message', msg => {
