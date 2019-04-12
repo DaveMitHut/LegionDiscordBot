@@ -32,7 +32,7 @@ client.on('message', msg => {
         var sides = parseInt(dice[1], 10);
         for (var i = 0; i < dice[0]; i++) {
             var rand = Math.floor(Math.random * sides) + 1;
-            console.log(rand + ' ' + sides);
+            console.log(Math.floor(Math.random * 10) + ' ' + sides);
             msg.reply('\nRoll ' + (i+1) + ': ' + rand);
         }
     }
