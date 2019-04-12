@@ -20,7 +20,8 @@ client.on('message', msg => {
     if (msg.content.startsWith('!commands')) {
         msg.reply(', here is a list of what I can do:\n!card cardname -> displays card for a given cardname\n' + 
                   '!legality cardname -> displays a cards legalities for Standard, Modern & Commander\n' + 
-                  '!rulings cardname -> displays existing rulings for a card');
+                  '!rulings cardname -> displays existing rulings for a card\n' + 
+                  '!dice xdx -> rolls the specified number of dice for you. !roll works as well');
     }
 })
 
