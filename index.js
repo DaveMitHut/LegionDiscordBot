@@ -29,8 +29,9 @@ client.on('message', msg => {
     if (msg.content.startsWith('!dice') || msg.content.startsWith('!roll')) {
         var cont = msg.content.split(" ");
         var dice = cont[1].split("d");
+        var sides = parseInt(dice[1], 10);
         for (var i = 0; i < dice[0]; i++) {
-            var rand = (Math.random * parseInt(dice[1], 10)) + 1;
+            var rand = (Math.random * sides) + 1;
             msg.reply('\nRoll ' + i + ': ' + rand);
         }
     }
