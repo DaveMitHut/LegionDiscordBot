@@ -31,8 +31,7 @@ client.on('message', msg => {
         var dice = cont[1].split("d");
         var sides = parseInt(dice[1], 10);
         for (var i = 0; i < dice[0]; i++) {
-            var rand = Math.floor(Math.random * sides) + 1;
-            console.log(Math.floor(Math.random * 10) + ' ' + sides);
+            var rand = Math.floor(Math.random() * sides) + 1;
             msg.reply('\nRoll ' + (i+1) + ': ' + rand);
         }
     }
