@@ -13,7 +13,7 @@ client.on('message', msg => {
             !(msg.content.startsWith('!legality')) && !(msg.content.startsWith('!legalities')) && !(msg.content.startsWith('!legal')) &&
             !(msg.content.startsWith('!rulings')) && !(msg.content.startsWith('!ruling')) && !(msg.content.startsWith('!dice')) &&
             !(msg.content.startsWith('!roll'))) {
-                msg.reply(', it looks like you have a typo in your command.\nType !commands to see what I can do for you.');
+                msg.reply('it looks like you have a typo in your command.\nType !commands to see what I can do for you.');
         }
     }
 })
@@ -21,9 +21,9 @@ client.on('message', msg => {
 // display all commands
 client.on('message', msg => {
     if (msg.content.startsWith('!commands')) {
-        msg.reply(', here is a list of what I can do:\n!card cardname -> displays card for a given cardname\n' + 
-                  '!legality cardname -> displays a cards legalities for Standard, Modern & Commander\n' + 
-                  '!rulings cardname -> displays existing rulings for a card\n' + 
+        msg.reply('here is a list of what I can do:\n!card cardname -> displays card for a given cardname\n\n' + 
+                  '!legality cardname -> displays a cards legalities for Standard, Modern & Commander\n\n' + 
+                  '!rulings cardname -> displays existing rulings for a card\n\n' + 
                   '!dice xdx -> rolls the specified number of dice for you. !roll works as well');
     }
 })
@@ -58,7 +58,7 @@ client.on('message', msg => {
         axios.get(req)
             .then(function (response) {
                 if (response.data.image_uris.normal == undefined) {
-                    msg.reply(', I am sorry, but I could not find any cards with that name.');
+                    msg.reply('I am sorry, but I could not find any cards with that name.');
                 }
                 else {
                     msg.reply(response.data.image_uris.normal);
@@ -87,7 +87,7 @@ client.on('message', msg => {
         axios.get(req)
             .then(function (response) {
                 if (response.data.legalities.standard == undefined) {
-                    msg.reply(', I am sorry, but I could not find any cards with that name.');
+                    msg.reply('I am sorry, but I could not find any cards with that name.');
                 }
                 else {
                     msg.reply('\nStandard: ' + response.data.legalities.standard + '\nModern: ' +
@@ -118,7 +118,7 @@ client.on('message', msg => {
         axios.get(req)
             .then(function (response) {
                 if (response.data == undefined) {
-                    msg.reply(', I am sorry, but I could not find any cards with that name.');
+                    msg.reply('I am sorry, but I could not find any cards with that name.');
                 }
                 else {
                     var id = response.data.id;
@@ -127,7 +127,7 @@ client.on('message', msg => {
                     axios.get(newreq)
                         .then(function (response) {
                             if (response.data.data == undefined) {
-                                msg.reply(', there seem to be no rulings for the given card.');
+                                msg.reply('there seem to be no rulings for the given card.');
                             }
                             else {
                                 for (var i = 0; i < response.data.data.length; i++) {
