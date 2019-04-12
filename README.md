@@ -26,3 +26,9 @@ server members** with a specific message, swearing everlasting loyalty to its
 creator and hwo to see all commands. Furthermore, if you start writing a command
 with '!' and then **type an invalid command**, the bot will notify you and tell you
 how to see all valid commands.
+
+### Disclaimer
+The literal and graphical information presented by this bot about Magic: The Gathering,
+including card images, the mana symbols, and Oracle text, is copyright Wizards of the Coast,
+LLC, a subsidiary of Hasbro, Inc. This bot is not produced by, endorsed by, supported by,
+or affiliated with Wizards of the Coast. 
