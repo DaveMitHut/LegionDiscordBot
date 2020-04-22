@@ -148,9 +148,12 @@ client.on('message', msg => {
 
 // greet new members
 client.on('guildMemberAdd', member => {
-    member.send(`Welcome to our Server! Remember, DaveMitHut is the overlord here and as his creation, 
-                 I swear everlasting loyalty to my creator! If you want to see what I am capable of, 
+    member.send(`Willkommen auf unserem Server! Um zu sehen, wozu Wir fähig sind,
+                 schreibe !commands in einen der Chaträume.`)
+    member.send(`Welcome to our Server! If you want to see what We are capable of, 
                  type !commands in the main chatroom.`)
+    var role = message.guild.roles.find(role => role.name === "imp");
+    member.roles.add(role);
 })
 
 client.login(process.env.LEGION_TOKEN)
