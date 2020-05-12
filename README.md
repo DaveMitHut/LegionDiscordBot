@@ -6,14 +6,14 @@ I wrote this little discord bot for our own private server in april 2019.
 In April 2020, we moved this bot to the server for our streaming Community,
 "Helden Auf Papier".
 
-The bot has small basic functions related to *Magic: The Gathering*, *Dungeons
+The bot has basic functions related to *Magic: The Gathering*, *Dungeons
 & Dragons* and general RPGs. It is named after the character 'Legion' from the
 Mass Effect games.
 
 ### Functions
-This bot has some small functions related to *Magic: The Gathering*,
-*Dungeons & Dragons* and other RPGs like displaying cards and rolling dice. The
-functions are displayed in the following table:
+This bot has some basic functions related to *Magic: The Gathering*, *Dungeons
+& Dragons* and other RPGs, like displaying cards and rulings or rolling dice. All
+functions are described in the following table:
 
 **Name** | **Additional Aliases** | **Function**
 ---- | ----- | --------
@@ -24,8 +24,8 @@ functions are displayed in the following table:
 **!legality cardname** | !legalities, !legal | display the legality of the specified card for the standard, modern & commander formats
 
 ### Additional functions
-In addition to the specified functions above, this bot will also **greet all new
-server members** with a specific message and information on how to view all available
+In addition to the specified functions above, this bot will also greet all new
+server members with a specific message and information on how to view all available
 commands. Furthermore, the bot will grant specific permissions to every new member of
 the server. If you type an invalid command, the bot will notify you and instruct you
 how to view all valid commands.
