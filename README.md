@@ -15,13 +15,13 @@ This bot has some small functions related to *Magic: The Gathering*,
 *Dungeons & Dragons* and other RPGs like displaying cards and rolling dice. The
 functions are displayed in the following table:
 
-**Name** | **Other Aliases** | **Function**
+**Name** | **Additional Aliases** | **Function**
 ---- | ----- | --------
-**!commands** | !command | displays all commands and what they do
-**!dice xdx** | !roll | rolls the specified number of given dice
-**!card cardname** | !cards | displays the mtg card for the given card name
-**!rulings cardname** | !ruling | displays all rulings for the given mtg card name
-**!legality cardname** | !legalities, !legal | displays the given mtg card's legalities for standard, modern & commander
+**!commands** | !command | display all available commands
+**!dice xdx** | !roll | roll the specified number of a specified dice
+**!card cardname** | !cards | display an image for the specified card
+**!rulings cardname** | !ruling | display all available rulings for the specified card
+**!legality cardname** | !legalities, !legal | display the legality of the specified card for the standard, modern & commander formats
 
 ### Additional functions
 In addition to the specified functions above, this bot will also **greet all new
