@@ -146,14 +146,14 @@ client.on('message', msg => {
     }
 })
 
-// greet new members
+// greet new members and give them the role "imp"
 client.on('guildMemberAdd', member => {
-    member.send(`Willkommen auf unserem Server! Um zu sehen, wozu Wir fähig sind,
-                 schreibe !commands in einen der Chaträume.`)
-    member.send(`Welcome to our Server! If you want to see what We are capable of, 
-                 type !commands in the main chatroom.`)
-    var role = message.guild.roles.find(role => role.name === "imp");
-    member.roles.add(role);
+    member.send(`Willkommen auf unserem Server! Um zu sehen, wozu diese Entität fähig ist,
+                 schreibe "!commands" in einen der Chaträume.`)
+    member.send(`Welcome to our Server! If you want to see what this entity is capable of, 
+                 type "!commands" in the main chatroom.`)
+    //var role = message.guild.roles.find(role => role.name === "imp");
+    //member.roles.add(role);
 })
 
 client.login(process.env.LEGION_TOKEN)
