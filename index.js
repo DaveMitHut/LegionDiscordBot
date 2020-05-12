@@ -152,8 +152,9 @@ client.on('guildMemberAdd', member => {
                  schreibe "!commands" in einen der Chaträume.`)
     member.send(`Welcome to our Server! If you want to see what this entity is capable of, 
                  type "!commands" in the main chatroom.`)
-    //var role = message.guild.roles.find(role => role.name === "imp");
-    //member.roles.add(role);
+    //add user to role "imp" and catch errors
+    let role = message.guild.roles.find(r => r.name === "imp");
+    member.addRole(role).catch(console.error);
 })
 
 client.login(process.env.LEGION_TOKEN)
