@@ -28,6 +28,13 @@ client.on('message', msg => {
     }
 })
 
+// display Cassandra text
+client.on('message', msg => {
+    if (msg.content.startsWith('!cassandra')) {
+        msg.reply('In der Session vom 15.04.2020 wurde Cassandra, Davids erster Spielercharakter in dieser Kampagne, durch eine herabfallende Decke erschlagen (weil Simon sein Feature vergessen hat).');
+    }
+})
+
 // roll a specified number of specified dice with !dice xdx
 client.on('message', msg => {
     if (msg.content.startsWith('!dice') || msg.content.startsWith('!roll')) {
