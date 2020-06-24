@@ -12,7 +12,7 @@ client.on('message', msg => {
         if (!(msg.content.startsWith('!commands')) && !(msg.content.startsWith('!card')) && !(msg.content.startsWith('!cards')) &&
             !(msg.content.startsWith('!legality')) && !(msg.content.startsWith('!legalities')) && !(msg.content.startsWith('!legal')) &&
             !(msg.content.startsWith('!rulings')) && !(msg.content.startsWith('!ruling')) && !(msg.content.startsWith('!dice')) &&
-            !(msg.content.startsWith('!roll'))) {
+            !(msg.content.startsWith('!roll')) && !(msg.content.startsWith('!cassandra'))) {
                 msg.reply('it looks like you have a typo in your command.\nType !commands to see what I can do for you.');
         }
     }
